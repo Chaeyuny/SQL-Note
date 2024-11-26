@@ -33,12 +33,12 @@
   <br>
   <br>
   
-✅   /*+ordered use_nl(a b c)*/
+✅   /*+ ordered use_nl(a b c) */
 
 : a b c는 테이블 alias 명이다. 
-- /*+ordered*/는 from절 테이블 순서대로 조인하도록 하는 힌트(접근 순서 결정)
+- /*+ ordered */는 from절 테이블 순서대로 조인하도록 하는 힌트(접근 순서 결정)
       
-- /*+use_nl*/은  접근 방법을 결정하는 힌트절인데 NESTED LOOP JOIN 방식으로 조인하도록 유도한다. NESTED LOOP JOIN은 중첩 루프조인으로, 자바에서 중첩 FOR문 사용할때랑 동작방식이 비슷하다. 
+- /*+ use_nl */은  접근 방법을 결정하는 힌트절인데 NESTED LOOP JOIN 방식으로 조인하도록 유도한다. NESTED LOOP JOIN은 중첩 루프조인으로, 자바에서 중첩 FOR문 사용할때랑 동작방식이 비슷하다. 
 - 업무에서는 두 힌트를 같이 썼다. 찾아보니 USE_NL은 단독으로 사용하기도 하지만 업무에서처럼 OREDRED와 같이 조인순서를 지정하는 힌트와 함께 사용하는 것이 일반적이라고 한다. 
       
  
@@ -46,7 +46,7 @@
   <br>
   <br>
   
- ✅  /*+ LEADING (b, a, c)*/ 
+ ✅  /*+ LEADING(b, a, c) */ 
  
      : ordered 힌트절에 대해 찾다가 알게 된 힌트다. 
 - ordered가 from절에 기재된 순서대로 조인하기 때문에 프롬절에 종속적이라면. 해당 힌트는 그렇지 않다. 
