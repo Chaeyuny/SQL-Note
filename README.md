@@ -14,7 +14,7 @@
 ✔ 업무에서 가장 많이 활용되고 있었던 건 /*+parallel(4)*/, 때때로 /*+ordered use_nl(a b c)*/
 <br><br>
 
-✅ /*+parallel(4)*/
+✅ /*+ parallel(4) */
 
 : 검색해서 나오는 건 정확히는 /*+ PARALLEL(table_name, degree)*/ . 실제로 쓸때는 그냥 숫자만 기재해서 활용했다. select 바로 옆에 붙여서 실행하면 적용된다.
 
